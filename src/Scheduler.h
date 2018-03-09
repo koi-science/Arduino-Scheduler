@@ -136,6 +136,11 @@ protected:
   static const size_t DEFAULT_MAIN_STACK_SIZE = 2048;
   static const size_t STACK_MAX = 16384;
 
+#elif defined(ARDUINO_ARCH_STM32F1)
+  /** Default stack size and stack max. */
+  static const size_t DEFAULT_STACK_SIZE = 1024;
+  static const size_t DEFAULT_MAIN_STACK_SIZE = 2048;
+  static const size_t STACK_MAX = 16384;
 #else
 #error "Scheduler.h: Arduino board not supported"
 #endif
